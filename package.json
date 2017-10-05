@@ -1,11 +1,10 @@
 {
   "name": "flyfisher-app",
   "version": "1.0.0",
-  "description": "Fly fishing app",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/khayes8/flyfisher-app/issues"
   },
-  "homepage": "https://github.com/khayes8/flyfisher-app#readme"
+  "homepage": "https://github.com/khayes8/flyfisher-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1",
+    "express-handlebars": "^3.0.0",
+    "mysql2": "^1.4.2",
+    "sequelize": "^4.13.5"
+  }
 }
