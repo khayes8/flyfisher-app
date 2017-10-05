@@ -30,28 +30,25 @@
 
     <div class="divider"></div>
     <div class="row">
-        <form class="col s12">
-            <!-- <form class="create-form" action="/" method="POST"> -->
+        <form class="col s12 create-form" action="/" method="POST">
             <div class="row">
-                <div class="input-field col s6">
-<!--                 <div class="form-group"> -->
-                    <input id="trip_name" type="text" class="validate">
-                    <label for="trip_name">Name</label>
-<!--                     </div> -->
+                <div class="input-field col s6 form-group">
+                    <input id="auth" type="text" class="validate" name="trip_name">
+                    <label for="auth">Name</label>
                 </div>
             </div>
 
             <div class="row">
-                <div class="input-field col s6">
-                    <input id="location" type="text" class="validate">
-                    <label for="location">Location</label>
+                <div class="input-field col s6 form-group">
+                    <input id="auth" type="text" class="validate" name="location">
+                    <label for="auth">Location</label>
                 </div>
             </div>
 
             <div class="row">
-                <div class="input-field col s6">
-                    <input id="date" type="text" class="validate">
-                    <label for="date">Date</label>
+                <div class="input-field col s6 form-group">
+                    <input id="auth" type="text" class="validate" name="trip_date">
+                    <label for="auth">Date</label>
                 </div>
             </div>
 
@@ -64,27 +61,26 @@
             </div>
             <div class="divider"></div>
             <div class="row">
-                <div class="input-field col s6">
-                    <input id="fish-name" type="text" class="validate">
-                    <label for="fish-name">Fish Name</label>
+                <div class="input-field col s6 form-group">
+                    <input id="auth" type="text" class="fish_name">
+                    <label for="auth">Fish Name</label>
                 </div>
             </div>
 
             <div class="row">
-                <div class="input-field col s12">
-                    <input id="notes" type="text" class="validate">
-                    <label for="notes">Notes</label>
+                <div class="input-field col s12 form-group">
+                    <input id="auth" type="text" class="notes">
+                    <label for="auth">Notes</label>
                 </div>
             </div>
 
             <div class="row">
-                <div class="input-field col s6">
-                    <input id="bait" type="text" class="validate">
-                    <label for="bait">Bait</label>
+                <div class="input-field col s6 form-group">
+                    <input id="auth" type="text" class="bait">
+                    <label for="auth">Bait</label>
                 </div>
             </div>
-
-            <!--       </form> -->
+			<button type="submit">Add Quote</button>
         </form>
     </div>
 
