@@ -1,21 +1,18 @@
 {
   "name": "flyfisher-app",
   "version": "1.0.0",
-  "description": "Track data about your fly-fishing trips.",
+  "description": "",
   "main": "server.js",
   "scripts": {
-     "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/khayes8/flyfisher-app.git"
   },
-  "keywords": [
-    "fly-fishing",
-    "Project2"
-  ],
-  "author": "A-Team",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/khayes8/flyfisher-app/issues"
@@ -24,7 +21,7 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.1",
-    "mysql": "^2.14.1",
+    "express-handlebars": "^3.0.0",
     "sequelize": "^4.13.5"
   }
 }
