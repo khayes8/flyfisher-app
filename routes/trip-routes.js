@@ -1,8 +1,9 @@
 //routes/trip-routes.js
+//Routes for displaying data and saving to the flyfisher db, Trip table
 
-var db = require("../models");
+var db = require("../models/trip.js");
 // TRIP ROUTES
-// =============================================================================
+// =================================/============================================
 module.exports = function(app) {
   // GET route for getting all of trips
   app.get("/api/trip", function(req, res) {

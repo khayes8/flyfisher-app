@@ -1,6 +1,7 @@
 //routes/fish-routes.js
+//Routes for displaying data and saving to the flyfisher db, Fish table
 
-var db = require("../models");
+var db = require("../models/fish.js");
 
 // FISH ROUTES
 // =============================================================================
