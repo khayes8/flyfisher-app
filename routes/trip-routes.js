@@ -8,7 +8,7 @@ module.exports = function(app) {
   // GET route for getting all of trips
   app.get("/api/trip", function(req, res) {
     // findAll returns all entries for the Trip table when used with no options
-    db.Trip.findAll({}).then(function(dbTrip) {
+    db.Trip.findAll({include: [db.Fish]}).then(function(dbTrip) {
       // Access to the trips as an argument inside of the callback function
       console.log(dbTrip);
       res.json(dbTrip);

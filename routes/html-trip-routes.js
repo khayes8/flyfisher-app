@@ -8,14 +8,30 @@
     });
 
     app.post("/trips", function(req, res) {
+      console.log(req.body);
+
       db.Trip.create({
-      text: req.body.text,
-      complete: req.body.complete
+      trip_name: req.body.trip_name,
+      location: req.body.location,
+      date: req.body.date,
+      // fish_name: req.body.fish_name,
+      // bait: req.body.bait,
+      // notes: req.body.notes
     }).then(function(hbsObject) {
       // Access created to the new trip as an argument inside of the callback function
-      res.render("trip", hbsObject);
+      console.log(hbsObject);
+      db.Fish.create({
+      TripId: hbsObject.id,
+      fish_name: req.body.fish_name,
+      bait: req.body.bait,
+      notes: req.body.notes
+      })
+      // res.end();
+      // res.render("trip", hbsObject);
+      res.redirect("/trips");
       })
     });
+
 
     app.get("/trips", function(req, res) {
       db.Trip.findAll({include: [db.Fish]}).then(data => {
