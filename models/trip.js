@@ -3,9 +3,10 @@ module.exports = function(sequelize, DataTypes) {
   var Trip = sequelize.define("Trip", {
     id: {
       type: DataTypes.INTEGER,
+      autoIncrement: true,
       primaryKey: true
     },
-    tripame: {
+    trip_name: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -13,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     }
-    // tripDate: {
+    // trip_date: {
     //   isDate: true,
     //   allowNull: false
     // }

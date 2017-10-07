@@ -1,7 +1,7 @@
 //routes/trip-routes.js
 //Routes for displaying data and saving to the flyfisher db, Trip table
 
-var db = require("../models/trip.js");
+var db = require("../models");
 // TRIP ROUTES
 // =================================/============================================
 module.exports = function(app) {
@@ -10,6 +10,7 @@ module.exports = function(app) {
     // findAll returns all entries for the Trip table when used with no options
     db.Trip.findAll({}).then(function(dbTrip) {
       // Access to the trips as an argument inside of the callback function
+      console.log(dbTrip);
       res.json(dbTrip);
     });
   });
