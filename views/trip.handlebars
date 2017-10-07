@@ -1,0 +1,25 @@
+ <ul class="collapsible" data-collapsible="accordion">
+     {{#each trip}}
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>{{trip_name}}</div>
+      <div class="collapsible-body">
+        <span>Location: {{location}}</span>
+        <span>Date: {{trip_date}}</span>
+        {{/each}}
+        {{#each fish}}
+        <span>Name: {{fish_name}}</span>
+        <span>Bait: {{bait}}</span>
+        <span>Notes: {{notes}}</span>
+        {{/each}}
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+      {{/each}}
+  </ul>
