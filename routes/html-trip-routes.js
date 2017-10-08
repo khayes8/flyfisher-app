@@ -7,6 +7,16 @@
       res.render("form");
     });
 
+    app.get("/trips", function(req, res) {
+      db.Trip.findAll({include: [db.Fish]}).then(data => {
+        var hbsObject = {
+          trips: data
+        };
+        console.log(hbsObject);
+        res.render("trip", hbsObject);
+      });
+    });
+
     app.post("/trips", function(req, res) {
       console.log(req.body);
 
@@ -31,15 +41,5 @@
       res.redirect("/trips");
       })
     });
-
-
-    app.get("/trips", function(req, res) {
-      db.Trip.findAll({include: [db.Fish]}).then(data => {
-        var hbsObject = {
-          trips: data
-        };
-        console.log(hbsObject);
-        res.render("trip", hbsObject);
-      });
-    });
+    
   }

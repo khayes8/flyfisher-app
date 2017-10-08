@@ -53,4 +53,4 @@ module.exports = function(app) {
       res.json(dbTrip);
     });
   });
-}
+};
