@@ -21,8 +21,8 @@
         <span>Bait: <span contenteditable="true">{{bait}}</span></span> </br>
         <span>Notes: <span contenteditable="true">{{notes}}</span></span> </br>
         {{/each}}
-        <button class="update" type="button">Update</button>
-        <button class="update" type="submit">Delete</button>
+        <button class="update" type="button" action="/trips" method="POST">Update</button>
+        <button class="update" type="submit" action="/trips" method="POST">Delete</button>
       </div>
     </li>
     {{/each}}

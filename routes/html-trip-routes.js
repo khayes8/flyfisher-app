@@ -21,6 +21,7 @@
       });
     });
 
+
     app.post("/trips", function(req, res) {
       console.log(req.body);
 
@@ -45,5 +46,44 @@
       res.redirect("/trips");
       })
     });
+
+    app.delete("/trips", function(req, res) {
+    // We just have to specify which todo we want to destroy with "where"
+    db.Trip.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbTodo) {
+      db.Fish.destroy({
+      TripId: hbsObject.id,
+      fish_name: req.body.fish_name,
+      bait: req.body.bait,
+      notes: req.body.notes
+    });
+    res.redirect("/trips");
+    });
+
+    });
+
+    app.put("/trips", function(req, res) {
+    // Update takes in an object describing the properties we want to update, and
+    // we use where to describe which objects we want to update
+    db.Trip.update({
+      trip_name: req.body.trip_name,
+      location: req.body.location,
+      date: req.body.date
+    }, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(hbsObject) {
+      db.Fish.update({
+      TripId: hbsObject.id,
+      fish_name: req.body.fish_name,
+      bait: req.body.bait,
+      notes: req.body.notes
+    });
+      res.redirect("/trips");
+  });
     
   }
