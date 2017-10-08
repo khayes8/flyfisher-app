@@ -14,14 +14,14 @@
     <li>
       <div class="collapsible-header"><i class="material-icons">filter_drama</i>{{trip_name}}</div>
       <div class="collapsible-body">
-        <span>Location: {{location}}</span> </br>
-        <span>Date: {{trip_date}}</span> </br>
+        <span>Location: <span contenteditable="true">{{location}}</span></span></br>
+        <span>Date: <span contenteditable="true">{{trip_date}}</span> </span></br>
         {{#each Fishes}}
-        <span>Name: {{fish_name}}</span> </br>
-        <span>Bait: {{bait}}</span> </br>
-        <span>Notes: {{notes}}</span> </br>
+        <span>Name: <span contenteditable="true">{{fish_name}}</span></span> </br>
+        <span>Bait: <span contenteditable="true">{{bait}}</span></span> </br>
+        <span>Notes: <span contenteditable="true">{{notes}}</span></span> </br>
         {{/each}}
-        <button class="update" type="submit">Update</button>
+        <button class="update" type="button">Update</button>
         <button class="update" type="submit">Delete</button>
       </div>
     </li>
