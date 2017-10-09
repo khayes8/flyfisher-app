@@ -29,12 +29,12 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{location}}</td>
-        <td>{{trip_date}}</td>
+        <td name= "location">{{location}}</td>
+        <td name="trip_date">{{trip_date}}</td>
         {{#each Fishes}}
-        <td>{{fish_name}}</td>
-        <td>{{bait}}</td>
-        <td>{{notes}}</td>
+        <td name="fish_name">{{fish_name}}</td>
+        <td name="bait">{{bait}}</td>
+        <td name="notes">{{notes}}</td>
         {{/each}}
       </tr>
     </tbody>
@@ -42,67 +42,6 @@
   <button class="btn btn-info" id="edit"><span class="glyphicon glyphicon-edit"></span> edit</button>
   <button class="btn btn-success"id="save"><span class="glyphicon glyphicon-save"></span> save</button>
 </div>
-
-            {{!-- <span class="title">Location: </span>
-            <span class="span">{{location}}</span></br>
-            <div class="row">
-                <div class="input-field col s6 form-group formb">
-                    <input type="text" name="firstname"><br>
-                </div>
-                <div class="input-field col s2 form-group formb">
-                    <a href="#" class="remove_field">Remove</a>
-                </div>
-            </div>
-
-            <span class="title">Date: </span>
-            <span class="span">{{trip_date}}</span></br>
-            <div class="row">
-                <div class="input-field col s6 form-group formb">
-                    <input type="text" name="firstname">
-                </div>
-                <div class="input-field col s2 form-group formb">
-                    <a href="#" class="remove_field">Remove</a>
-                </div>
-            </div>
-
-            {{#each Fishes}}
-            <span class="title">Name: </span>
-            <span class="span">{{fish_name}}</span> </br>
-            <div class="row">
-                <div class="input-field col s6 form-group formb">
-                    <input type="text" name="firstname"><br>
-                </div>
-                <div class="input-field col s2 form-group formb">
-                    <a href="#" class="remove_field">Remove</a>
-                </div>
-            </div>
-
-            <span class="title">Bait:</span>
-            <span class="span">{{bait}}</span> </br>
-            <div class="row">
-                <div class="input-field col s6 form-group formb">
-                    <input type="text" name="firstname"><br>
-                </div>
-                <div class="input-field col s2 form-group formb">
-                    <a href="#" class="remove_field">Remove</a>
-                </div>
-            </div>
-
-            <span class="title">Notes:</span>
-            <span class="span">{{notes}}</span> </br>
-            <div class="row">
-                <div class="input-field col s6 form-group formb">
-                    <input type="text" name="firstname"><br>
-                </div>
-                <div class="input-field col s2 form-group formb">
-                    <a href="#" class="remove_field">Remove</a>
-                </div>
-            </div>
-
-            {{/each}}
-            <button class="update" type="submit">Update</button>
-            <button class="delete" type="submit">Delete</button>
-            <button id="submitChanges" class="hidden" type="submit">Submit</button> --}}
         </div>
     </li>
     {{/each}}
