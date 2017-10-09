@@ -18,16 +18,16 @@ $(document).ready(function() {
 	   $(update).click(function(e){ //on add input button click
         e.preventDefault();
         //hide and disable elements
-        $(".span").hide();
+        // $(".span").hide();
         $(".update").prop("disabled",true);
         $("#submitChanges").show();
         $(".formb").show();
         $("remove_field").hide();
     });
 
-	   // $("#submitChanges").click(function()){
-	   // 	alert("hi");
-	   // }
+	   $("#submitChanges").click(function(){
+	   	alert("hi");
+	   })
 });
 
 
