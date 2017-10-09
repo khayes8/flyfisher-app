@@ -20,20 +20,27 @@ $('#save').click(function(){
     var content = $(this).val();
     console.log(content);//.replace(/\n/g,"<br>");
     $(this).html(content);
-    $(this).contents().unwrap();    
+    $(this).contents().unwrap();   
   }); 
   // updateDB(content);
   $('#edit').show(); 
+
+  var location = $(".location").val().trim();
+    	// var trip_date = $("trip_date").val().trim();
+    	var fish_name = $(".fish_name").val().trim();
+    	var bait = $(".bait").val().trim();
+    	var notes = $(".notes").val().trim();
+  // updateDB(location, fish_name, bait, notes);
 });
 
-// function updateDB(content){
-// 	$.ajax({
-//       method: "PUT",
-//       url: "/trips",
-//       data: content
-//     }).done(){
-// 		$.get("/trips", function(data) {
-// console.log(data)
-//     });
+// function updateDB(location, fishName, bait, notes){
+// 	var tripObj = {
+// 		location: location,
+// 		fishName: fishName,
+// 		bait: bait,
+// 		notes: notes
+// 	}
+// 	console.log(tripObj);
 //     }
-//   }
+  
+
