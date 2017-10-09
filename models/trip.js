@@ -5,18 +5,16 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       primaryKey: true
     },
-    tripame: {
+    trip_name: {
       type: DataTypes.STRING,
       allowNull: false
     },
     location: {
       type: DataTypes.STRING,
       allowNull: false
-    }
-    // tripDate: {
-    //   isDate: true,
-    //   allowNull: false
-    // }
+    },
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE,
   });
 
   Trip.associate = function(models) {

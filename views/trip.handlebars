@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col s12">
+        <h1>Trips</h1>
+    </div>
+</div>
+
+<div class="divider"></div>
+<span><button class="index"><a href="/">Home</a></button></span>
+<span><button class="create"><a href="/create">Create Trip</a></button></span>
+<div class="divider"></div>
+
+ <ul class="collapsible" data-collapsible="accordion">
+     {{#each trips}}
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>{{trip_name}}</div>
+      <div class="collapsible-body">
+        <span class ="span">Location: {{location}}</span></br>
+        <span class ="span">Date: {{trip_date}}</span></br>
+        {{#each Fishes}}
+        <span class ="span">Name: {{fish_name}}</span> </br>
+        <span class ="span">Bait: {{bait}}</span> </br>
+        <span class ="span">Notes: {{notes}}</span> </br>
+        {{/each}}
+        <button class="update" type="submit" action="/trips" method="POST">Update</button>
+        <button class="delete" type="submit" action="/trips" method="POST">Delete</button>
+      </div>
+    </li>
+    {{/each}}
+</ul>
