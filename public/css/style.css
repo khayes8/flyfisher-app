@@ -1,4 +1,12 @@
-#hidden
+.remove_field
 {
-	display: none;
+	font-size: 10px;
 }
+
+.collapsible-body{
+	max-height: 1000px;
+}
+
+/*form{
+	height: 20px;
+}*/

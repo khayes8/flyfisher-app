@@ -13,7 +13,8 @@ $(document).ready(function() {
     var update      = $(".update"); //Add button ID
     var i = 1; //initlal text box count
 	$("#submitChanges").hide();
-	$("form").hide();
+	$(".formb").hide();
+	$("remove_field").hide();
     
 
     $(update).click(function(e){ //on add input button click
@@ -22,12 +23,9 @@ $(document).ready(function() {
         $(".span").hide();
         $(".update").prop("disabled",true);
         $("#submitChanges").show();
-        $("form").show();
-        //no more than one input field appended after text
-        // if(i <= max_fields){ //max input box allowed
-        //     i++; //text box increment
-        //     $(title).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
-        // }
+        $(".formb").show();
+        $("remove_field").hide();
+
     //JUST BEFORE END OF FUNCTION DO NOT DELETE QUOTES BELOW
     });
 
