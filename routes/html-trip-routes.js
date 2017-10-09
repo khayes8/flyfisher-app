@@ -85,5 +85,6 @@
     });
       res.redirect("/trips");
   });
+  });
     
   }
