@@ -14,9 +14,9 @@ module.exports = function(sequelize, DataTypes) {
     location: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    createdAt: DataTypes.DATE,
-    updatedAt: DataTypes.DATE,
+    }
+    // createdAt: DataTypes.DATE,
+    // updatedAt: DataTypes.DATE,
   });
 
   Trip.associate = function(models) {
