@@ -4,18 +4,18 @@
             <h1>Trips</h1>
         </div>
         <div class="divider"></div>
-        <button class="index"><a href="/">Home</a></button>
-        <button class="create"><a href="/create">Create Trip</a></button>
+        <button class="waves-effect waves-light btn index"><a href="/">Home</a></button>
+        <button class="waves-effect waves-light btn create"><a href="/create">Create Trip</a></button>
         <div class="divider"></div>
     </div>
 </div>
 <ul class="collapsible" data-collapsible="accordion">
     {{#each trips}}
     <li>
-  <div class="collapsible-header">
-          <div class="valign-wrapper">
-            <h5 class="center-align">{{trip_name}}</h5>
-          </div>
+        <div class="valign-wrapper">
+            <div class="collapsible-header">
+                <h5 class="center-align">{{trip_name}}</h5>
+            </div>
         </div>
         <div class="collapsible-body">
             <table class="table table-bordered">
