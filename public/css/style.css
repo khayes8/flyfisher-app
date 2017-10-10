@@ -1,3 +1,13 @@
+.homeTitle{
+	margin-top: 200px;
+}
+body {
+	background-image: url("images/fish.jpg"),
+	height: 800px;
+}
+h3{
+	text-align: center;
+}
 .remove_field
 {
 	font-size: 10px;
@@ -10,3 +20,10 @@
 /*form{
 	height: 20px;
 }*/
+a {
+	color: #000000;
+}
+
+.btn {
+	background-color: #95dfd8;
+}

@@ -1,8 +1,4 @@
 
-
-
-
-
 $('#edit').click(function(){
   $('#edit').hide();
   $('td').each(function(){
