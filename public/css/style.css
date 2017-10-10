@@ -1,3 +1,15 @@
+.homeTitle{
+	margin-top: 200px;
+	font-family: 'Shrikhand', cursive;
+}
+h1{
+	font-family: 'Shrikhand', cursive;
+}
+body {
+	background-image: url("images/fish.jpg"),
+	height: 800px;
+}
+
 .remove_field
 {
 	font-size: 10px;
@@ -7,6 +19,10 @@
 	max-height: 1000px;
 }
 
-/*form{
-	height: 20px;
-}*/
+a {
+	color: #000000;
+}
+
+.btn {
+	background-color: #c5e4f8;
+}

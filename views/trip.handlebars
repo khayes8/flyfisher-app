@@ -1,82 +1,46 @@
-<div class="row">
-    <div class="col s12">
-        <h1>Trips</h1>
+<div class="valign-wrapper">
+    <div class="row center-align">
+        <div class="col s12">
+            <h1>Trips</h1>
+        </div>
+        <div class="divider"></div>
+        <button class="waves-effect waves-light btn index"><a href="/">Home</a></button>
+        <button class="waves-effect waves-light btn create"><a href="/create">Create Trip</a></button>
+        <div class="divider"></div>
     </div>
 </div>
-
-<div class="divider"></div>
-<button class="index"><a href="/">Home</a></button>
-<button class="create"><a href="/create">Create Trip</a></button>
-<div class="divider"></div>
-
- <ul class="collapsible" data-collapsible="accordion">
-     {{#each trips}}
+<ul class="collapsible" data-collapsible="accordion">
+    {{#each trips}}
     <li>
-{{!--     <form class="col s12 create-form" action="/trips" method="POST"> --}}
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>{{trip_name}}</div>
-      <div class="collapsible-body">
-        <span class="title">Location: </span>
-        <span class ="span">{{location}}</span></br>
-        <div class="row">
-            <div class="input-field col s6 form-group formb">
-              <input type="text" name="firstname"><br>
-            </div>
-            <div class="input-field col s2 form-group formb">
-              <a href="#" class="remove_field">Remove</a>
-            </div>
+            <div class="collapsible-header">
+                <h5 class="center-align">{{trip_name}}</h5>
         </div>
-
-        <span class="title">Date: </span>
-        <span class ="span">{{trip_date}}</span></br>
-         <div class="row">
-            <div class="input-field col s6 form-group formb">
-              <input type="text" name="firstname">
-            </div>
-            <div class="input-field col s2 form-group formb">
-              <a href="#" class="remove_field">Remove</a>
-            </div>
+        <div class="collapsible-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Location:</th>
+                        <th>Date:</th>
+                        <th>Fish Name:</th>
+                        <th>Bait:</th>
+                        <th>Notes:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="location" name="location">{{location}}</td>
+                        <td class="trip_date" name="trip_date">{{trip_date}}</td>
+                        {{#each Fishes}}
+                        <td class="fish_name" name="fish_name">{{fish_name}}</td>
+                        <td class="bait" name="bait">{{bait}}</td>
+                        <td class="notes" name="notes">{{notes}}</td>
+                        {{/each}}
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-info" id="edit"><span class="glyphicon glyphicon-edit"></span> edit</button>
+            <button class="btn btn-success" id="save"><span class="glyphicon glyphicon-save"></span> save</button>
         </div>
-
-        {{#each Fishes}}
-        <span class="title">Name: </span>
-        <span class ="span">{{fish_name}}</span> </br>
-         <div class="row">
-            <div class="input-field col s6 form-group formb">
-              <input type="text" name="firstname"><br>
-            </div>
-            <div class="input-field col s2 form-group formb">
-              <a href="#" class="remove_field">Remove</a>
-            </div>
-        </div>
-
-        <span class="title">Bait</span>
-        <span class ="span">{{bait}}</span> </br>
-        <div class="row">
-            <div class="input-field col s6 form-group formb">
-              <input type="text" name="firstname"><br>
-            </div>
-            <div class="input-field col s2 form-group formb">
-              <a href="#" class="remove_field">Remove</a>
-            </div>
-        </div>
-
-        <span class="title">Notes</span>
-        <span class ="span">{{notes}}</span> </br>
-         <div class="row">
-            <div class="input-field col s6 form-group formb">
-              <input type="text" name="firstname"><br>
-            </div>
-            <div class="input-field col s2 form-group formb">
-              <a href="#" class="remove_field">Remove</a>
-            </div>
-        </div>
-
-        {{/each}}
-        <button class="update" type="submit">Update</button>
-        <button class="delete" type="submit">Delete</button>
-        <button id="submitChanges" class="hidden" type="submit">Submit</button>
-      </div>
-{{!--     </form> --}}
     </li>
     {{/each}}
 </ul>
