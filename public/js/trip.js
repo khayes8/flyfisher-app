@@ -27,6 +27,14 @@ $('#save').click(function(){
     	var bait = $(".bait").val().trim();
     	var notes = $(".notes").val().trim();
   // updateDB(location, fish_name, bait, notes);
+
+  $.ajax({
+    url: '/trips',
+    type: 'PUT',
+    // success: function(result){
+      
+    // }
+  })
 });
 
 // function updateDB(location, fishName, bait, notes){
