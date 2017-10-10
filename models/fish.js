@@ -3,6 +3,7 @@ module.exports = function(sequelize, DataTypes) {
   var Fish = sequelize.define("Fish", {
     id: {
       type: DataTypes.INTEGER,
+      autoIncrement: true,
       primaryKey: true
     },
     fish_name: {

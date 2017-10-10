@@ -1,15 +1,16 @@
 //routes/trip-routes.js
 //Routes for displaying data and saving to the flyfisher db, Trip table
 
-var db = require("../models/trip.js");
+var db = require("../models");
 // TRIP ROUTES
 // =================================/============================================
 module.exports = function(app) {
   // GET route for getting all of trips
   app.get("/api/trip", function(req, res) {
     // findAll returns all entries for the Trip table when used with no options
-    db.Trip.findAll({}).then(function(dbTrip) {
+    db.Trip.findAll({include: [db.Fish]}).then(function(dbTrip) {
       // Access to the trips as an argument inside of the callback function
+      console.log(dbTrip);
       res.json(dbTrip);
     });
   });
@@ -17,10 +18,10 @@ module.exports = function(app) {
   app.post("/api/trip", function(req, res) {
     console.log(req.body);
     // Create takes an argument of an object describing the item to insert to Trips table.
-    // Pass in an object with Trip table properties
+    // Pass in an object with text and complete property (req.body)
     db.Trip.create({
-      trip_name: req.body.trip_name,
-      location: req.body.location
+      text: req.body.text,
+      complete: req.body.complete
     }).then(function(dbTrip) {
       // Access created to the new trip as an argument inside of the callback function
       res.json(dbTrip);
@@ -42,8 +43,8 @@ module.exports = function(app) {
     // Update takes in an object describing the properties to update; where
     // describes the objects to update
     db.Trip.update({
-      trip_name: req.body.trip_name,
-      location: req.body.location
+      text: req.body.text,
+      complete: req.body.complete
     }, {
       where: {
         id: req.body.id
