@@ -52,13 +52,13 @@ $('#save').click(function(){
   // updateDB(content);
   $('#edit').show();
 
-  var location = $(".location").val().trim();
-        // var trip_date = $("trip_date").val().trim();
-        var fish_name = $(".fish_name").val().trim();
-        var bait = $(".bait").val().trim();
-        var notes = $(".notes").val().trim();
-  // updateDB(location, fish_name, bait, notes);
-});
+//   var location = $(".location").val().trim();
+//         // var trip_date = $("trip_date").val().trim();
+//         var fish_name = $(".fish_name").val().trim();
+//         var bait = $(".bait").val().trim();
+//         var notes = $(".notes").val().trim();
+//   // updateDB(location, fish_name, bait, notes);
+// });
 
 // function updateDB(location, fishName, bait, notes){
 //  var tripObj = {

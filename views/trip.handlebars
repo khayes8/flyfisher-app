@@ -1,4 +1,4 @@
-<div class="row">
+{{!-- <div class="row">
     <div class="col s12">
         <h1>Trips</h1>
     </div>
@@ -42,6 +42,55 @@
   <button class="btn btn-info" id="edit"><span class="glyphicon glyphicon-edit"></span> edit</button>
   <button class="btn btn-success"id="save"><span class="glyphicon glyphicon-save"></span> save</button>
 </div>
+        </div>
+    </li>
+    {{/each}}
+</ul> --}}
+
+<div class="valign-wrapper">
+    <div class="row center-align">
+        <div class="col s12">
+            <h1>Trips</h1>
+        </div>
+        <div class="divider"></div>
+        <button class="index"><a href="/">Home</a></button>
+        <button class="create"><a href="/create">Create Trip</a></button>
+        <div class="divider"></div>
+    </div>
+</div>
+<ul class="collapsible" data-collapsible="accordion">
+    {{#each trips}}
+    <li>
+  <div class="collapsible-header">
+          <div class="valign-wrapper">
+            <h5 class="center-align">{{trip_name}}</h5>
+          </div>
+        </div>
+        <div class="collapsible-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Location:</th>
+                        <th>Date:</th>
+                        <th>Fish Name:</th>
+                        <th>Bait:</th>
+                        <th>Notes:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="location" name="location">{{location}}</td>
+                        <td class="trip_date" name="trip_date">{{trip_date}}</td>
+                        {{#each Fishes}}
+                        <td class="fish_name" name="fish_name">{{fish_name}}</td>
+                        <td class="bait" name="bait">{{bait}}</td>
+                        <td class="notes" name="notes">{{notes}}</td>
+                        {{/each}}
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-info" id="edit"><span class="glyphicon glyphicon-edit"></span> edit</button>
+            <button class="btn btn-success" id="save"><span class="glyphicon glyphicon-save"></span> save</button>
         </div>
     </li>
     {{/each}}

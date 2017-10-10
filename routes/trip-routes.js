@@ -16,7 +16,7 @@ module.exports = function(app) {
   });
   // POST route for saving a new trip
   app.post("/api/trip", function(req, res) {
-    console.log(req.body);
+    // console.log(req.body);
     // Create takes an argument of an object describing the item to insert to Trips table.
     // Pass in an object with text and complete property (req.body)
     db.Trip.create({

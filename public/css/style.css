@@ -1,11 +1,11 @@
-.remove_field
+/*.remove_field
 {
 	font-size: 10px;
 }
 
 .collapsible-body{
 	max-height: 1000px;
-}
+}*/
 
 /*form{
 	height: 20px;
@@ -17,11 +17,41 @@
   background-position: 50% 50%;
 }*/
 /*CSS styling for the trips form page*/
-.formHeader {
+/*.formHeader {
   background: #80deea;
 }
 
 .divForm {
   margin: auto;
+}*/
+
+
+.homeTitle{
+  margin-top: 200px;
+}
+body {
+  background-image: url("images/fish.jpg"),
+  height: 800px;
+}
+h3{
+  text-align: center;
+}
+.remove_field
+{
+  font-size: 10px;
 }
 
+.collapsible-body{
+  max-height: 1000px;
+}
+
+/*form{
+  height: 20px;
+}*/
+a {
+  color: #000000;
+}
+
+.btn {
+  background-color: #95dfd8;
+}
