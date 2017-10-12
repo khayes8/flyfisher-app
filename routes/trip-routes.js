@@ -39,7 +39,7 @@ module.exports = function(app) {
     });
   });
   // PUT route for updating trips. Grip updated trip  data from req.body
-  app.put("/api/trip", function(req, res) {
+  app.put("/trips", function(req, res) {
     // Update takes in an object describing the properties to update; where
     // describes the objects to update
     db.Trip.update({
