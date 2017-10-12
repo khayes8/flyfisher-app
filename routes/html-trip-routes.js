@@ -68,20 +68,26 @@ module.exports = function(app) {
   app.put("/trips", function(req, res) {
     // Update takes in an object describing the properties we want to update, and
     // we use where to describe which objects we want to update
+    console.log("starts here******************");
+    console.log(req.body.trip_id);
     db.Trip.update({
-      trip_name: req.body.trip_name,
       location: req.body.location,
       date: req.body.date
     }, {
       where: {
-        id: req.body.id
+        id: req.body.trip_id
       }
     }).then(function(hbsObject) {
+      console.log(hbsObject);
       db.Fish.update({
       TripId: hbsObject.id,
       fish_name: req.body.fish_name,
       bait: req.body.bait,
       notes: req.body.notes
+    }, {
+      where: {
+        tripId: req.body.trip_id
+      }
     });
       res.redirect("/trips");
     });

@@ -1,22 +1,25 @@
 $('#edit').click(function(){
   $('#edit').hide();
+  var count = 1;
   $('td').each(function(){
     var content = $(this).html();
-    $(this).html('<textarea>' + content + '</textarea>');
+
+    $(this).html('<textarea id="field_' + count +'">' + content + '</textarea>');
+    count++;
   });
 
-  $('#save').show();
-  $('.info').fadeIn('fast');
+  //$('#save').show();
+  //$('.info').fadeIn('fast');
 });
 
 $('#save').click(function(){
-  $('#save, .info').hide();
-  $('textarea').each(function(){
-    var content = $(this).val();
-    console.log(content);//.replace(/\n/g,"<br>");
-    $(this).html(content);
-    $(this).contents().unwrap();
-  });
+ // $('#save, .info').hide();
+  // $('textarea').each(function(){
+  //   var content = $(this).val();
+  //   console.log(content);//.replace(/\n/g,"<br>");
+  //   $(this).html(content);
+  //   $(this).contents().unwrap();
+  // });
   // updateDB(content);
   $('#edit').show();
 
@@ -27,12 +30,24 @@ $('#save').click(function(){
         var notes = $(".notes").val().trim();
   // updateDB(location, fish_name, bait, notes);
 
+  var newObject = {
+      location: $("#field_2").val().trim(),
+      date: $("#field_3").val().trim(),
+      trip_id: $("#field_1").val().trim(),
+      fish_name: $("#field_4").val().trim(),
+      bait:$("#field_5").val().trim(),
+      notes: $("#field_6").val().trim()
+  }
+
+  console.log(JSON.stringify(newObject, null, 2));
+
   $.ajax({
     url: '/trips',
     type: 'PUT',
-    // success: function(result){
-
-    // }
+    data: newObject,
+       success: function(req, res){
+      console.log(req.body.location);
+    }
   })
 });
 
