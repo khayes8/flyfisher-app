@@ -43,11 +43,10 @@ module.exports = function(app) {
     // Update takes in an object describing the properties to update; where
     // describes the objects to update
     db.Trip.update({
-      text: req.body.text,
-      complete: req.body.complete
+      location: req.body.location
     }, {
       where: {
-        id: req.body.id
+        id: req.body.trip_id
       }
     }).then(function(dbTrip) {
       res.json(dbTrip);

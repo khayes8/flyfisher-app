@@ -1,4 +1,4 @@
-$('#edit').click(function(){
+$(document).on("click","#edit", function(){
   $('#edit').hide();
   var count = 1;
   $('td').each(function(){
@@ -45,8 +45,8 @@ $('#save').click(function(){
     url: '/trips',
     type: 'PUT',
     data: newObject,
-       success: function(req, res){
-      console.log(req.body.location);
+       success: function(data){
+      console.log(data);
     }
   })
 });
