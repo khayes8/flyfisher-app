@@ -57,7 +57,7 @@ module.exports = function(app) {
 //       {
 //          where: {
 //            id: req.body.id
-//        }     
+//        }
     }).then(function(dbFish) {
       res.json(dbFish);
     });

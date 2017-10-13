@@ -4,6 +4,7 @@ module.exports = function(sequelize, DataTypes) {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
+      allowNull: false,
       primaryKey: true
     },
     trip_name: {
@@ -14,10 +15,8 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     }
-    // trip_date: {
-    //   isDate: true,
-    //   allowNull: false
-    // }
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE,
   });
 
   Trip.associate = function(models) {
@@ -27,4 +26,5 @@ module.exports = function(sequelize, DataTypes) {
   };
 
   return Trip;
+
 };

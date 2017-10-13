@@ -19,6 +19,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
+                        <th>id</th>
                         <th>Location:</th>
                         <th>Date:</th>
                         <th>Fish Name:</th>
@@ -28,7 +29,8 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="location" name="location">{{location}}</td>
+                         <td class="id" name="id" id="tripIs">{{id}}</td>
+                        <td class="location" name="location" id="location">{{location}}</td>
                         <td class="trip_date" name="trip_date">{{trip_date}}</td>
                         {{#each Fishes}}
                         <td class="fish_name" name="fish_name">{{fish_name}}</td>
